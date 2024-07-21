@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 30px;
+  align-items: center;
+  box-shadow: #cdefef 0px 5px 15px;
+}
+
+.messages {
+  height: 678px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #b6efee white;
+  padding: 20px;
+}
+
+.each-message {
+  margin-block: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: #cdefef 0px 5px 15px;
+  background-color: #e0f5f5;
+}
+
+.message-p p {
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.email-time {
+  color: rgb(164, 164, 164);
+  margin-bottom: 5px;
+}
+
+.sendMessage {
+  margin-block: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.input-message {
+  width: 90%;
+  border-radius: 10px;
+  border: 2px solid #24bfbe;
+  font-size: 20px;
+}
+
+.input-message:focus {
+  border: 3px solid #24bfbe;
+  outline: none;
+}
+
+.send-btn {
+  width: 10%;
+  border-radius: 10px;
+  background-color: #24bfbe;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.leave-btn {
+  background-color: #e0f5f5;
+  color: black;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 425px) {
+  .input-message {
+    width: 70%;
+  }
+  .send-btn {
+    width: 20%;
+  }
+}

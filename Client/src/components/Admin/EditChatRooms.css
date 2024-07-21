@@ -1,0 +1,27 @@
+.EditChatRooms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 2px solid #05a9a7;
+}
+
+.group-name-edit {
+  font-size: 22px;
+  margin-inline: 10px;
+}
+
+.delete-btn {
+  background-color: #05a9a7;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  margin-inline: 10px;
+}

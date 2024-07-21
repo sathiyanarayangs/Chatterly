@@ -1,0 +1,12 @@
+.Home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.chat-app-para {
+  text-align: center;
+  font-size: 70px;
+}
