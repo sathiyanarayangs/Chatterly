@@ -15,7 +15,7 @@ function EditChatRooms() {
   }, [navigate, state.role]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/get-chat-rooms")
+    fetch("https://chatterly-server.vercel.app/get-chat-rooms")
       .then((response) => response.json())
       .then((data) => {
         setGroups(data);
@@ -26,7 +26,7 @@ function EditChatRooms() {
   }, []);
 
   const deleteGroup = (groupId) => {
-    fetch(`http://localhost:5000/delete-group/${groupId}`, {
+    fetch(`https://chatterly-server.vercel.app/delete-group/${groupId}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

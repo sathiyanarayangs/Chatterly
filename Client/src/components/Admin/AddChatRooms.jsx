@@ -18,13 +18,16 @@ const AddChatRooms = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/create-chat-room", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name }),
-      });
+      const response = await fetch(
+        "https://chatterly-server.vercel.app/create-chat-room",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name }),
+        }
+      );
 
       const data = await response.json();
 

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "./ChatRooms.css";
 
 function ChatRooms() {
-  const socket = io("http://localhost:5000");
+  const socket = io("https://chatterly-server.vercel.app/");
   const { state } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ function ChatRooms() {
   const [joinedGroups, setJoinedGroups] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/get-chat-rooms")
+    fetch("https://chatterly-server.vercel.app/get-chat-rooms")
       .then((response) => response.json())
       .then((data) => {
         setGroups(data);
@@ -33,7 +33,9 @@ function ChatRooms() {
 
   useEffect(() => {
     if (state.email) {
-      fetch(`http://localhost:5000/get-joined-groups?email=${state.email}`)
+      fetch(
+        `https://chatterly-server.vercel.app/get-joined-groups?email=${state.email}`
+      )
         .then((response) => response.json())
         .then((data) => {
           setJoinedGroups(data.joinedGroups);
@@ -58,7 +60,7 @@ function ChatRooms() {
 
   const joinGroup = (group) => {
     setCurrentGroup(group);
-    fetch("http://localhost:5000/join-group", {
+    fetch("https://chatterly-server.vercel.app/join-group", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +78,7 @@ function ChatRooms() {
 
   const leaveGroup = () => {
     if (currentGroup) {
-      fetch("http://localhost:5000/leave-group", {
+      fetch("https://chatterly-server.vercel.app/leave-group", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ const Logout = () => {
   const navigate = useNavigate();
   //promises
   useEffect(() => {
-    fetch("http://localhost:5000/logout", {
+    fetch("https://chatterly-server.vercel.app/logout", {
       method: "GET",
       headers: {
         Accept: "application/json",

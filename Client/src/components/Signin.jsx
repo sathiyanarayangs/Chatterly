@@ -20,7 +20,7 @@ const Signin = () => {
     e.preventDefault();
     const { email, password } = formData;
 
-    const res = await fetch("http://localhost:5000/signin", {
+    const res = await fetch("https://chatterly-server.vercel.app/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

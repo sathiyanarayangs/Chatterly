@@ -19,7 +19,7 @@ const Signup = () => {
 
     const { email, password, confirmPassword } = formData;
 
-    const res = await fetch("http://localhost:5000/register", {
+    const res = await fetch("https://chatterly-server.vercel.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
