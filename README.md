@@ -1,4 +1,4 @@
-# Chat Application
+# Chatterly - A Chat Application
 
 A real-time Chat Application built with React, Node.js, Express, Socket.io, and MongoDB.
 
